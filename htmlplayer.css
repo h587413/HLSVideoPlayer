@@ -1,0 +1,221 @@
+html,
+
+:root {
+    --background-color: black;
+    --text-color: hsl(0, 0%, 26%);
+}
+body {
+    background-color: black;
+    height: 100%;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+#player-wrapper {
+    background-color: black;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#player-wrapper input {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    text-align: center;
+    width: 60%;
+    font-size: 16px;
+    outline: none;
+}
+
+#player-wrapper button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    text-align: center;
+    width: 200px;
+    font-size: 16px;
+    color: #fff;
+    background-color: red;
+    outline: none;
+}
+
+#player-wrapper button:disabled {
+    background-color: red;
+    cursor: not-allowed;
+}
+
+#player-wrapper button.enabled {
+    background-color: green;
+    cursor: pointer;
+}
+
+#video {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+}
+
+#controls {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#controls:hover {
+    opacity: 1;
+}
+
+#stream-url {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    background-color: #f0f0f0;
+}
+
+/* Input filed and play button */
+
+#link-input {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    text-align: center;
+    width: 30%;
+    font-size: 16px;
+    outline: none;
+}
+
+#play-button {
+    position: absolute;
+    top: 87%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    margin: 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    text-align: center;
+    width: 150px;
+    font-size: 16px;
+    color: #fff;
+    background-color: red;
+    outline: none;
+}
+
+
+
+#play-button:disabled {
+    background-color: red;
+    cursor: not-allowed;
+}
+
+#play-button.enabled {
+    background-color: green;
+    cursor: pointer;
+}
+
+#title {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #5e5e5e;
+    font-family: customFonts;
+    font-size: 50px;
+    font-weight: normal;
+    text-align: center;
+
+}
+
+
+
+.wrapper {
+    display: grid;
+    position: absolute;
+    place-content: center;
+    top: 14%;
+    min-height: 20vh;
+    font-family: "Oswald", sans-serif;
+    font-size: 65px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+
+
+.wrapper > div {
+    grid-area: 1/1/-1/-1;
+}
+.top {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+}
+
+.bottom {
+    clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+    color: transparent;
+    background: -webkit-linear-gradient(177deg, #939393 53%, var(--text-color) 65%);
+    background: linear-gradient(177deg, #858585 53%, var(--text-color) 65%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transform: translateX(-0.02em);
+}
+
+
+
+@font-face {
+    font-family: customFonts;
+    src: url(Moon2.0-Regular.otf);
+}
+
+/* media control? */
+
+@media (max-width: 480px) {
+    #player-wrapper {
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    #controls {
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 0;
+    }
+}

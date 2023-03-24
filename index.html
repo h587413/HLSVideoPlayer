@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <head>
+
+        <title>HLS Video Player</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+
+        <!-- Eyevinn HTML Player CSS -->
+        <link rel="stylesheet" href="htmlplayer.css"></link>
+
+        <link rel="stylesheet" href="style.css"></link>
+
+    </head>
+
+        <body>
+        <!-- The element where the player will be placed -->
+            <div id="player-wrapper">
+                <video id="video" controls></video>
+            </div>
+
+           <!-- <div id="title">HLS VIDEO PLAYER</div> -->
+
+        <div class="wrapper">
+            <div class="top">HLS VIDEO PLAYER</div>
+            <div class="bottom" aria-hidden="true">HLS VIDEO PLAYER</div>
+        </div>
+
+            <!-- Input field for link -->
+            <input type="text" id="link-input" placeholder="Enter HLS file link"></input>
+
+            <!-- Button to initiate playback -->
+            <button id="play-button">Play</button>
+
+            <!-- HTML Player Javascript -->
+            <script type="module" src="htmlplayer.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+        </body>

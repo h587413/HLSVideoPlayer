@@ -1,0 +1,3 @@
+# Project exclude paths
+/my-channel-engine/node_modules/
+/node_modules/
